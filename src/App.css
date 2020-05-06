@@ -1,22 +1,125 @@
-.App {
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  line-height: 1.4;
+}
+
+a {
+  color: #333;
+  text-decoration: none;
+}
+
+.container {
+  padding: 0 1rem;
+}
+
+.btn {
+  display: inline-block;
+  border: none;
+  background: #555;
+  color: #fff;
+  padding: 7px 20px;
+  cursor: pointer;
+}
+.btn:hover {
+  background: whitesmoke;
+  color: gray;
+  border: solid 1px black;
+}
+
+input {
+  width: 20%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  box-sizing: border-box;
+}
+
+.app_background {
+  border: solid 1px black;
+  text-align: left;
+  width: 100%;
+}
+
+span {
+  color: blue;
+}
+
+li {
+  width: 16.5rem;
+  box-sizing: border-box;
+  border: solid 1px black;
+  height: 40px;
+  text-align: left;
+  margin-top: 10px;
+  margin-right: 2px;
+}
+
+.navbar {
+  display: grid;
+  grid-template-columns: auto 1fr;
+}
+
+.nav-links {
+  align-self: center;
+  list-style-type: none;
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
+.nav-link {
+  color: violet;
+  text-transform: capitalize;
+  text-decoration: none;
+  font-size: 1.2rem;
+  transition: all 0.3s linear;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.btn-delete {
+  width: 100%;
+  height: 100%;
+  display: inline-block;
+  border: none;
+  background: #555;
+  color: #fff;
+  font-size: large;
+  cursor: pointer;
 }
 
-.App-link {
-  color: #09d3ac;
+.btn-delete:hover {
+  background: whitesmoke;
+  color: #555;
+  border: solid 1px black;
+}
+
+@media screen and (min-width: 432px) {
+  .nav-links {
+    grid-template-columns: 1fr 1fr;
+    align-self: left;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .nav-links {
+    align-self: left;
+  }
+}
+
+@media screen and (min-width: 992px) {
+  .nav-links {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+@media screen and (min-width: 1140px) {
+  .nav-links {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    margin-right: 8px;
+  }
 }
